@@ -37,8 +37,8 @@ pm_caption += f"➥ **Sudo** : `{amiusingsudo}`\n"
 pm_caption += f"➥ **Log Connections** : `{logchat}` \n"
 pm_caption += f"➥ **My Boss** : {DEFAULTUSER} \n"
 pm_caption += "➥ **Heroku Database** : `AWS - Working Properly`\n\n"
-pm_caption += "➥ **License** :" (@zamaneh_h)\n"
-pm_caption += "➥ **Copyright** : By [@zamaneh_h)\n"
+pm_caption += "➥ **License** : [GNU General Public License v3.0](github.com/StarkGang/FridayUserbot/blob/master/LICENSE)\n"
+pm_caption += "➥ **Copyright** : By [زهره] (@zamaneh_h)\n"
 pm_caption += "🎀 zohre 🎀"
 
 @borg.on(admin_cmd(pattern=r"alive"))
