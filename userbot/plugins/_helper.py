@@ -1,4 +1,4 @@
-from userbot import CMD_LIST
+I8910from userbot import CMD_LIST
 
 @command(pattern="^.help ?(.*)")
 async def cmd_list(event):
@@ -28,7 +28,7 @@ async def cmd_list(event):
             else:
                 await event.edit(input_str + " is not a valid plugin!")
         else:
-            help_string = """Friday Userbot Modules Are Listed Here !\n
+            help_string = """ Userbot Modules Are Listed Here !\n
 For More Help or Support Visit @zamaneh_z"""
             results = await bot.inline_query(  # pylint:disable=E0602
                 tgbotusername,
