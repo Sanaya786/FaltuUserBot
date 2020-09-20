@@ -1,8 +1,8 @@
 """Fetch App Details from Playstore.
 .app <app_name> to fetch app details.
-Credits @MrConfused
+Credits @zamaneh_z
 .appr <app_name>  to fetch app details with request link.
-  © [cHAuHaN](http://t.me/amnd33p)"""
+  © [zohre](http://t.me/zamaneh_z)"""
 
 import re
 import bs4
@@ -67,8 +67,8 @@ async def apkr(event):
         app_details += "\n\n<code>Developer :</code> <a href='"+app_dev_link+"'>"+app_dev+"</a>"
         app_details += "\n<code>Rating :</code> "+app_rating.replace("Rated ", "⭐ ").replace(" out of ", "/").replace(" stars", "", 1).replace(" stars", "⭐ ").replace("five", "5")
         app_details += "\n<code>Features :</code> <a href='"+app_link+"'>View in Play Store</a>"
-        app_details += "\n\n<b>Download : </b> <a href='https://t.me/joinchat/JCu-H1NikiYDgNjpjPYd4A'>Request_Here</a>"
-        app_details += "\n\n===> @FridayOT <==="
+        app_details += "\n\n<b>Download : </b> <a href='https://t.me/zamaneh_z'>Request_Here</a>"
+        app_details += "\n\n===> @zamaneh_z <==="
         await event.edit(app_details, link_preview = True, parse_mode = 'HTML')
     except IndexError:
         await event.edit("No result found in search. Please enter **Valid app name**")
