@@ -1,4 +1,4 @@
-"""AFK Plugin for @FridayOT
+"""AFK Plugin for @zamaneh_z
 Syntax: .afk REASON"""
 import asyncio
 import datetime
@@ -83,7 +83,7 @@ async def set_not_afk(event):
                 event.chat_id,
                 "Please set `PRIVATE_GROUP_ID` " + \
                 "for the proper functioning of afk functionality " + \
-                "Please Seek Support in @FridayOT\n\n `{}`".format(str(e)),
+                "Please Seek Support in @zamaneh_z\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True
             )
