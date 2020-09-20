@@ -11,4 +11,4 @@ async def _(event):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await starkislub.edit("**🏓Pong!**\n`{}`\n For Assistance Join @FridayOT".format(ms))
+    await starkislub.edit("**Pong!**\n`{}`\n For Assistance Join @FridayOT".format(ms))
