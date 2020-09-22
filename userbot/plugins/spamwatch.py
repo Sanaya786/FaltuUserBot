@@ -33,6 +33,4 @@ if SPAM_PROTECT:
                                              f"**Action Taken :**  : {action}"
                                              "Kindly Appeal Here => @SpamWatch")
                 except:
-                    return 
-
-
+                    return
