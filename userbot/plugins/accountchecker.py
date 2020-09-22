@@ -25,13 +25,11 @@ async def zee5(event):
             stark = input_str.split(":", 1)
     else:
         await stuber.edit(
-            "You Are Using Invalid Syntax ! Make Sure To Use email:pass Regex"
-        )
+            "You Are Using Invalid Syntax ! Make Sure To Use email:pass Regex")
         return
     if len(stark) != 2:
         await stuber.edit(
-            "You Are Using Invalid Syntax ! Make Sure To Use email:pass Regex"
-        )
+            "You Are Using Invalid Syntax ! Make Sure To Use email:pass Regex")
         return
     email = stark[0]
     password = stark[1]
