@@ -1,5 +1,5 @@
 """Check if userbot alive. If you change these, you become the gayest gay such that even the gay world will disown you."""
-#IMG CREDITS: @WhySooSerious
+# IMG CREDITS: @WhySooSerious
 import asyncio
 import time
 from userbot.plugins.timefunc import uptimebot, get_readable_time
@@ -24,7 +24,7 @@ else:
     logchat = 'Dis-Connected ❌'
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
-PM_IMG = "https://telegra.ph/file/1f81e1f3a99f04ee49ba5.jpg" 
+PM_IMG = "https://telegra.ph/file/1f81e1f3a99f04ee49ba5.jpg"
 pm_caption = "➥ **zohre IS:** `ONLINE`\n\n"
 pm_caption += "➥ **SYSTEMS STATS**\n"
 pm_caption += "➥ **Telethon Version:** `1.15.0`\n**Python:** `3.7.4`\n"
@@ -33,7 +33,7 @@ pm_caption += "➥ **Database Status:**  `Functional`\n"
 pm_caption += "➥ **OS** : `Slim Buster` \n"
 pm_caption += "➥ **Current Branch** : `Master`\n"
 pm_caption += f"➥ **Version** : `{currentversion}`\n"
-pm_caption += f"➥ **Sudo** : `{amiusingsudo}`\n"                                                                      
+pm_caption += f"➥ **Sudo** : `{amiusingsudo}`\n"
 pm_caption += f"➥ **Log Connections** : `{logchat}` \n"
 pm_caption += f"➥ **My Boss** : {DEFAULTUSER} \n"
 pm_caption += "➥ **Heroku Database** : `AWS - Working Properly`\n\n"
@@ -41,10 +41,11 @@ pm_caption += "➥ **License** : [GNU General Public License v3.0](github.com/St
 pm_caption += "➥ **Copyright** : By (@zamaneh_z)\n"
 pm_caption += "🎀 zohre 🎀"
 
+
 @borg.on(admin_cmd(pattern=r"alive"))
 @borg.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
 async def zohre(alive):
     chat = await alive.get_chat()
     """ For .alive command, check if the bot is running.  """
-    await borg.send_file(alive.chat_id, PM_IMG,caption=pm_caption)
+    await borg.send_file(alive.chat_id, PM_IMG, caption=pm_caption)
     await alive.delete()
