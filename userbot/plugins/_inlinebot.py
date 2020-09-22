@@ -1,5 +1,5 @@
-"""Copy Right By Xtra-Telegram 2020 
-Fixed And Customized By @StarkXD 
+"""Copy Right By Xtra-Telegram 2020
+Fixed And Customized By @StarkXD
 Don't Edit Before This Line"""
 import asyncio
 import io

@@ -1,7 +1,7 @@
 # if you change credits, you get anal cancer and get murdered by russians in 3 days.
 """
 Support chatbox for pmpermit.
-Used by incoming messages with trigger as @zamaneh_z 
+Used by incoming messages with trigger as @zamaneh_z
 Will not work for already approved people.
 """
 import asyncio
