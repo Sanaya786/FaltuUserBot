@@ -18,7 +18,8 @@ import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from userbot import ALIVE_NAME
 from userbot.utils import admin_cmd
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in heroku vars"
+DEFAULTUSER = str(
+    ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in heroku vars"
 PREV_REPLY_MESSAGE = {}
 
 
@@ -40,8 +41,7 @@ async def _(event):
                 "`1`. To chat with my master\n"
                 "`2`. To Spam my master's Inbox.\n"
                 "`3`. To enquire something\n"
-                "`4`. To request something\n"
-            )
+                "`4`. To request something\n")
             ONE = "`I Have Registered Your Request ! Don't Worry My Master Will Be Here Soon To Chat With You !` \n\n"
             TWO = "`Please Don't Spam My Master Inbox ! You Have Been Reported Until Further Notice !`"
             FOUR = "`Okay ! I See You Can Request Your Demands ! Please Wait Untill My Master Approves You` !"
@@ -66,14 +66,16 @@ async def _(event):
                     if not response.text == "/start":
                         await borg.send_message(chat, TWO)
                         await asyncio.sleep(3)
-                        await event.client(functions.contacts.BlockRequest(chat_id))
+                        await event.client(
+                            functions.contacts.BlockRequest(chat_id))
             elif y == "2":
                 await borg.send_message(chat, LWARN)
                 response = await conv.get_response(chat)
                 if not response.text == "/start":
                     await borg.send_message(chat, TWO)
                     await asyncio.sleep(3)
-                    await event.client(functions.contacts.BlockRequest(chat_id))
+                    await event.client(functions.contacts.BlockRequest(chat_id)
+                                       )
 
             elif y == "3":
                 await borg.send_message(chat, FOUR)
@@ -87,7 +89,8 @@ async def _(event):
                     if not response.text == "/start":
                         await borg.send_message(chat, TWO)
                         await asyncio.sleep(3)
-                        await event.client(functions.contacts.BlockRequest(chat_id))
+                        await event.client(
+                            functions.contacts.BlockRequest(chat_id))
             elif y == "4":
                 await borg.send_message(chat, FIVE)
                 response = await conv.get_response(chat)
@@ -97,7 +100,8 @@ async def _(event):
                     if not response.text == "/start":
                         await borg.send_message(chat, TWO)
                         await asyncio.sleep(3)
-                        await event.client(functions.contacts.BlockRequest(chat_id))
+                        await event.client(
+                            functions.contacts.BlockRequest(chat_id))
             else:
                 await borg.send_message(
                     chat,
@@ -111,4 +115,5 @@ async def _(event):
                     if not response.text == "/start":
                         await borg.send_message(chat, TWO)
                         await asyncio.sleep(3)
-                        await event.client(functions.contacts.BlockRequest(chat_id))
+                        await event.client(
+                            functions.contacts.BlockRequest(chat_id))

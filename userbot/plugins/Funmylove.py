@@ -94,36 +94,14 @@ async def meme(event):
     await event.edit(flower + flower + flower + "      ")
     await event.edit(flower + flower + flower + flower + "     ")
     await event.edit(flower + flower + flower + flower + flower + "    ")
-    await event.edit(
-        flower + flower + flower + flower + flower + flower + flower + "   "
-    )
-    await event.edit(
-        flower + flower + flower + flower + flower + flower + flower + flower + "  "
-    )
-    await event.edit(
-        flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + " "
-    )
-    await event.edit(
-        flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-        + flower
-    )
+    await event.edit(flower + flower + flower + flower + flower + flower +
+                     flower + "   ")
+    await event.edit(flower + flower + flower + flower + flower + flower +
+                     flower + flower + "  ")
+    await event.edit(flower + flower + flower + flower + flower + flower +
+                     flower + flower + flower + " ")
+    await event.edit(flower + flower + flower + flower + flower + flower +
+                     flower + flower + flower + flower)
     await asyncio.sleep(sleepValue)
 
 
@@ -261,7 +239,8 @@ async def _(event):
 
 @borg.on(admin_cmd("cheart ?(.*)"))
 async def _(event):
-    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
+    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@",
+                                                             "!"):
         await event.edit("❤️")
         await asyncio.sleep(0.3)
         await event.edit("💙")
@@ -4409,7 +4388,6 @@ async def car(event):
 
 # ================= CONSTANT =================
 
-
 GAMBAR_TITIT = """
 🍆🍆
 🍆🍆🍆
@@ -4442,44 +4420,40 @@ async def emoji_penis(e):
 @register(outgoing=True, pattern="^.figlol$")
 async def figlol(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit(
-            "`\n╱┏┓╱╱╱╭━━━╮┏┓╱╱╱╱ `"
-            "`\n╱┃┃╱╱╱┃╭━╮┃┃┃╱╱╱╱ `"
-            "`\n╱┃┗━━┓┃╰━╯┃┃┗━━┓╱ `"
-            "`\n╱┗━━━┛╰━━━╯┗━━━┛╱ `"
-        )
+        await e.edit("`\n╱┏┓╱╱╱╭━━━╮┏┓╱╱╱╱ `"
+                     "`\n╱┃┃╱╱╱┃╭━╮┃┃┃╱╱╱╱ `"
+                     "`\n╱┃┗━━┓┃╰━╯┃┃┗━━┓╱ `"
+                     "`\n╱┗━━━┛╰━━━╯┗━━━┛╱ `")
 
 
 @register(outgoing=True, pattern="^.fuck$")
 async def gtfo(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit(
-            "\n......................................../´¯/) "
-            "\n......................................,/¯../ "
-            "\n...................................../..../ "
-            "\n..................................../´.¯/"
-            "\n..................................../´¯/"
-            "\n..................................,/¯../ "
-            "\n................................../..../ "
-            "\n................................./´¯./"
-            "\n................................/´¯./"
-            "\n..............................,/¯../ "
-            "\n............................./..../ "
-            "\n............................/´¯/"
-            "\n........................../´¯./"
-            "\n........................,/¯../ "
-            "\n......................./..../ "
-            "\n....................../´¯/"
-            "\n....................,/¯../ "
-            "\n.................../..../ "
-            "\n............./´¯/'...'/´¯¯`·¸ "
-            "\n........../'/.../..../......./¨¯\ "
-            "\n........('(...´...´.... ¯~/'...') "
-            "\n.........\.................'...../ "
-            "\n..........''...\.......... _.·´ "
-            "\n............\..............( "
-            "\n..............\.............\..."
-        )
+        await e.edit("\n......................................../´¯/) "
+                     "\n......................................,/¯../ "
+                     "\n...................................../..../ "
+                     "\n..................................../´.¯/"
+                     "\n..................................../´¯/"
+                     "\n..................................,/¯../ "
+                     "\n................................../..../ "
+                     "\n................................./´¯./"
+                     "\n................................/´¯./"
+                     "\n..............................,/¯../ "
+                     "\n............................./..../ "
+                     "\n............................/´¯/"
+                     "\n........................../´¯./"
+                     "\n........................,/¯../ "
+                     "\n......................./..../ "
+                     "\n....................../´¯/"
+                     "\n....................,/¯../ "
+                     "\n.................../..../ "
+                     "\n............./´¯/'...'/´¯¯`·¸ "
+                     "\n........../'/.../..../......./¨¯\ "
+                     "\n........('(...´...´.... ¯~/'...') "
+                     "\n.........\.................'...../ "
+                     "\n..........''...\.......... _.·´ "
+                     "\n............\..............( "
+                     "\n..............\.............\...")
 
 
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
@@ -4519,9 +4493,9 @@ async def _(event):
             await event.edit(animation_chars[i % 8])
 
 
-CMD_HELP.update(
-    {
-        "CipherXFun": ".slash\
+CMD_HELP.update({
+    "CipherXFun":
+    ".slash\
 \n\n.para\
 \n\n.q\
 \n\n.oof\
@@ -4565,5 +4539,4 @@ CMD_HELP.update(
 \n\n.fuck\
 \n\n.jagh\
 nUsage: List of All Available Commands."
-    }
-)
+})
