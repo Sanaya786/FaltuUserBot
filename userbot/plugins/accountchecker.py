@@ -1,12 +1,13 @@
-import requests
-import os
-import requests
 import json
+import os
+
+import requests
+from friday.util import admin_cmd, edit_or_reply, sudo_cmd
+from telethon.tl.functions.account import UpdateProfileRequest
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
-from friday.util import sudo_cmd, admin_cmd, edit_or_reply
-from userbot.plugins import idgen, findnemo
-from telethon.tl.functions.account import UpdateProfileRequest
+
+from userbot.plugins import findnemo, idgen
 
 
 @borg.on(admin_cmd("zee5 (.*)"))

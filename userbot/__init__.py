@@ -1,17 +1,20 @@
+import asyncio
 import os
 import sys
-from telethon.sessions import StringSession
-from telethon import TelegramClient
-from var import Var
-from pylast import LastFMNetwork, md5
-from logging import basicConfig, getLogger, INFO, DEBUG
-from distutils.util import strtobool as sb
-from pySmartDL import SmartDL
-from dotenv import load_dotenv
-import asyncio
-import pylast
-from requests import get
 import time
+from distutils.util import strtobool as sb
+from logging import DEBUG, INFO, basicConfig, getLogger
+
+import pylast
+from dotenv import load_dotenv
+from pylast import LastFMNetwork, md5
+from pySmartDL import SmartDL
+from requests import get
+from telethon import TelegramClient
+from telethon.sessions import StringSession
+
+from var import Var
+
 from .function import fridayfunction as topfunc
 
 Lastupdate = time.time()
