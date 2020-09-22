@@ -1,9 +1,9 @@
 #  creates a layer from the base Docker image.
 FROM python:3.8.5-slim-buster
- 
+
 # https://shouldiblamecaching.com/
 ENV PIP_NO_CACHE_DIR 1
- 
+
 # fix "ephimeral" / "AWS" file-systems
 RUN sed -i.bak 's/us-west-2\.ec2\.//' /etc/apt/sources.list
 # to resynchronize the package index files from their sources.
@@ -24,10 +24,10 @@ RUN sh -c 'echo "deb https://mkvtoolnix.download/debian/ buster main" >> /etc/ap
 RUN apt -qq update
 # SeD
 ENV LANG C.UTF-8
- 
+
 # we don't have an interactive xTerm
 ENV DEBIAN_FRONTEND noninteractive
- 
+
 # install google chrome
 RUN mkdir -p /tmp/ && \
     cd /tmp/ && \
@@ -36,7 +36,7 @@ RUN mkdir -p /tmp/ && \
     dpkg -i ./google-chrome-stable_current_amd64.deb; apt -fqqy install && \
     # clean up the container "layer", after we are done
     rm ./google-chrome-stable_current_amd64.deb
- 
+
 # install chromedriver
 RUN mkdir -p /tmp/ && \
     cd /tmp/ && \
@@ -44,7 +44,7 @@ RUN mkdir -p /tmp/ && \
     unzip /tmp/chromedriver.zip chromedriver -d /usr/bin/ && \
     # clean up the container "layer", after we are done
     rm /tmp/chromedriver.zip
- 
+
 # install required packages
 RUN apt -qq install -y --no-install-recommends \
     # this package is required to fetch "contents" via "TLS"
@@ -62,7 +62,7 @@ RUN apt -qq install -y --no-install-recommends \
     megatools mediainfo rclone && \
     # clean up the container "layer", after we are done
     rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp
- 
+
 # For Upgrading Setup Tool
 RUN pip3 install --upgrade pip setuptools
 # adds files from your Docker client’s current directory.

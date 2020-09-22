@@ -1,22 +1,26 @@
+import asyncio
 import os
 import sys
-from telethon.sessions import StringSession
-from telethon import TelegramClient
-from var import Var
-from pylast import LastFMNetwork, md5
-from logging import basicConfig, getLogger, INFO, DEBUG
-from distutils.util import strtobool as sb
-from pySmartDL import SmartDL
-from dotenv import load_dotenv
-import asyncio
-import pylast
-from requests import get
 import time
+from distutils.util import strtobool as sb
+from logging import basicConfig
+from logging import DEBUG
+from logging import getLogger
+from logging import INFO
+
+import pylast
+from dotenv import load_dotenv
+from pylast import LastFMNetwork
+from pylast import md5
+from pySmartDL import SmartDL
+from requests import get
+from telethon import TelegramClient
+from telethon.sessions import StringSession
+
 from .function import fridayfunction as topfunc
+from var import Var
 
 Lastupdate = time.time()
-
-from var import Var
 
 if Var.STRING_SESSION:
     session_name = str(Var.STRING_SESSION)
@@ -24,7 +28,6 @@ if Var.STRING_SESSION:
 else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
-
 
 CMD_LIST = {}
 # for later purposes
@@ -38,7 +41,8 @@ ENV = os.environ.get("ENV", False)
 
 # Bot Logs setup:
 if bool(ENV):
-    CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
+    CONSOLE_LOGGER_VERBOSE = sb(
+        os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
     if CONSOLE_LOGGER_VERBOSE:
         basicConfig(
@@ -46,8 +50,9 @@ if bool(ENV):
             level=DEBUG,
         )
     else:
-        basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-                    level=INFO)
+        basicConfig(
+            format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+            level=INFO)
     LOGS = getLogger(__name__)
 
     # Check if the config was edited by using the already used variable.
@@ -75,7 +80,8 @@ if bool(ENV):
     PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
     # Console verbose logging
-    CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
+    CONSOLE_LOGGER_VERBOSE = sb(
+        os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
     # SQL Database URI
     DB_URI = os.environ.get("DATABASE_URL", None)
@@ -88,8 +94,9 @@ if bool(ENV):
 
     # Chrome For Carbon
     CHROME_DRIVER = os.environ.get("CHROME_DRIVER", "/usr/bin/chromedriver")
-    GOOGLE_CHROME_BIN = os.environ.get("GOOGLE_CHROME_BIN", "/usr/bin/google-chrome")
-   
+    GOOGLE_CHROME_BIN = os.environ.get("GOOGLE_CHROME_BIN",
+                                       "/usr/bin/google-chrome")
+
     # Heroku Credentials for updater.
     HEROKU_MEMEZ = sb(os.environ.get("HEROKU_MEMEZ", "False"))
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -97,11 +104,9 @@ if bool(ENV):
 
     # Pm Permit Img
     PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
-    #PRIVATE_GROUP_ID = os.environ.get("PRIVATE_GROUP_ID", None)
+    # PRIVATE_GROUP_ID = os.environ.get("PRIVATE_GROUP_ID", None)
     AUTONAME = os.environ.get("AUTONAME", None)
     CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT", None)
-
-
 
     # OpenWeatherMap API Key
     OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", None)
@@ -118,7 +123,7 @@ if bool(ENV):
 
     # Default .alive name
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
-    
+
     LESS_SPAMMY = os.environ.get("LESS_SPAMMY", True)
 
     # Time & Date - Country and Time Zone
@@ -129,7 +134,7 @@ if bool(ENV):
     # Clean Welcome
     CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "True"))
 
-    # Spamwatch Module 
+    # Spamwatch Module
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
     ANTISPAM_SYSTEM = os.environ.get("ANTISPAM_SYSTEM", "DISABLE")
     WHITE_CHAT = PRIVATE_GROUP_ID = int(os.environ.get("WHITE_CHAT", False))
@@ -144,10 +149,12 @@ if bool(ENV):
     LASTFM_PASSWORD_PLAIN = os.environ.get("LASTFM_PASSWORD", None)
     LASTFM_PASS = pylast.md5(LASTFM_PASSWORD_PLAIN)
     if not LASTFM_USERNAME == "None":
-        lastfm = pylast.LastFMNetwork(api_key=LASTFM_API,
-                                      api_secret=LASTFM_SECRET,
-                                      username=LASTFM_USERNAME,
-                                      password_hash=LASTFM_PASS)
+        lastfm = pylast.LastFMNetwork(
+            api_key=LASTFM_API,
+            api_secret=LASTFM_SECRET,
+            username=LASTFM_USERNAME,
+            password_hash=LASTFM_PASS,
+        )
     else:
         lastfm = None
 
@@ -157,21 +164,21 @@ if bool(ENV):
     G_DRIVE_AUTH_TOKEN_DATA = os.environ.get("G_DRIVE_AUTH_TOKEN_DATA", None)
     GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", None)
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY",
-                                         "./downloads")
+                                             "./downloads")
 else:
     # Put your ppe vars here if you are using local hosting
     PLACEHOLDER = None
 
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
-if not os.path.exists('bin'):
-    os.mkdir('bin')
+if not os.path.exists("bin"):
+    os.mkdir("bin")
 
 binaries = {
     "https://raw.githubusercontent.com/yshalsager/megadown/master/megadown":
     "bin/megadown",
     "https://raw.githubusercontent.com/yshalsager/cmrudl.py/master/cmrudl.py":
-    "bin/cmrudl"
+    "bin/cmrudl",
 }
 
 for binary, path in binaries.items():
@@ -190,4 +197,3 @@ CMD_HELP = {}
 ISAFK = False
 AFKREASON = None
 # End of PaperPlaneExtended Support Vars
-
