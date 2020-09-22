@@ -14,14 +14,14 @@ islogokay = Config.PRIVATE_GROUP_ID
 currentversion = "3.0"
 
 if issudousing:
-    amiusingsudo = 'Active ✅'
+    amiusingsudo = "Active ✅"
 else:
-    amiusingsudo = 'Inactive ❌'
+    amiusingsudo = "Inactive ❌"
 
 if islogokay:
-    logchat = 'Connected ✅'
+    logchat = "Connected ✅"
 else:
-    logchat = 'Dis-Connected ❌'
+    logchat = "Dis-Connected ❌"
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 PM_IMG = "https://telegra.ph/file/1f81e1f3a99f04ee49ba5.jpg"
