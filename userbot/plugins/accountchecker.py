@@ -20,16 +20,25 @@ async def zee5(event):
         if ":" in text:
             stark = input_str.split(":", 1)
     else:
-        await stuber.edit("You Are Using Invalid Syntax ! Make Sure To Use email:pass Regex")
+        await stuber.edit(
+            "You Are Using Invalid Syntax ! Make Sure To Use email:pass Regex"
+        )
         return
-    if (len(stark) != 2):
-        await stuber.edit("You Are Using Invalid Syntax ! Make Sure To Use email:pass Regex")
+    if len(stark) != 2:
+        await stuber.edit(
+            "You Are Using Invalid Syntax ! Make Sure To Use email:pass Regex"
+        )
         return
     email = stark[0]
     password = stark[1]
     results = requests.get(
-        f"https://userapi.zee5.com/v1/user/loginemail?email={email}&password={password}").json()
+        f"https://userapi.zee5.com/v1/user/loginemail?email={email}&password={password}"
+    ).json()
     if not results.get("token"):
-        await stuber.edit(f"**ZEE5 Account** : \n**Email** : `{email}` \n**Password** : `{password}` \n**Respone** : __Invalid Login__ 💫 \n**Checked Using Friday Userbot**")
+        await stuber.edit(
+            f"**ZEE5 Account** : \n**Email** : `{email}` \n**Password** : `{password}` \n**Respone** : __Invalid Login__ 💫 \n**Checked Using Friday Userbot**"
+        )
     else:
-        await stuber.edit(f"**ZEE5 Account** : \n**Email** : `{email}` \n**Password : `{password}` \n**Respone** : __Login Sucessful 🇮🇳__ \n**Checked Using Friday Userbot**")
+        await stuber.edit(
+            f"**ZEE5 Account** : \n**Email** : `{email}` \n**Password : `{password}` \n**Respone** : __Login Sucessful 🇮🇳__ \n**Checked Using Friday Userbot**"
+        )

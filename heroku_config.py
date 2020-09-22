@@ -20,8 +20,7 @@ class Var(object):
     TG_BOT_TOKEN_BF_HER = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
     # Send .get_id in any channel to fill this value.
     PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", -100))
-    PRIVATE_GROUP_BOT_API_ID = int(
-        os.environ.get("PRIVATE_GROUP_BOT_API_ID", -100))
+    PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID", -100))
     TG_BOT_USER_NAME_BF_HER = os.environ.get("TG_BOT_USER_NAME_BF_HER", None)
     NO_SONGS = bool(os.environ.get("NO_SONGS", False))
     DOWNLOAD_PFP_URL_CLOCK = os.environ.get("DOWNLOAD_PFP_URL_CLOCK", None)
@@ -33,7 +32,7 @@ class Var(object):
     if AUTH_TOKEN_DATA != None:
         if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
             os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
-        t_file = open(TEMP_DOWNLOAD_DIRECTORY+"auth_token.txt", "w")
+        t_file = open(TEMP_DOWNLOAD_DIRECTORY + "auth_token.txt", "w")
         t_file.write(AUTH_TOKEN_DATA)
         t_file.close()
     PRIVATE_GROUP_ID = int(os.environ.get("PRIVATE_GROUP_ID", None))

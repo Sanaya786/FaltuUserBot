@@ -15,8 +15,9 @@ def stark_finder(s, first, last):
     except ValueError:
         return ""
 
+
 # Id Generator
 
 
 def id_generator(size=64, chars=string.ascii_uppercase + string.digits):
-    return ''.join(random.choice(chars) for _ in range(size))
+    return "".join(random.choice(chars) for _ in range(size))
