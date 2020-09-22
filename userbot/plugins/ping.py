@@ -2,7 +2,9 @@ from datetime import datetime
 
 from telethon import events
 
-from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot.utils import admin_cmd
+from userbot.utils import edit_or_reply
+from userbot.utils import sudo_cmd
 
 
 @borg.on(admin_cmd(pattern="ping$"))

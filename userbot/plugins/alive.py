@@ -5,10 +5,13 @@ import time
 
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from uniborg.util import admin_cmd, edit_or_reply, sudo_cmd
+from uniborg.util import admin_cmd
+from uniborg.util import edit_or_reply
+from uniborg.util import sudo_cmd
 
 from userbot import ALIVE_NAME
-from userbot.plugins.timefunc import get_readable_time, uptimebot
+from userbot.plugins.timefunc import get_readable_time
+from userbot.plugins.timefunc import uptimebot
 
 uptime = get_readable_time((time.time() - uptimebot))
 issudousing = Config.SUDO_USERS

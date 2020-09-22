@@ -3,7 +3,6 @@
 Credits @zamaneh_z
 .appr <app_name>  to fetch app details with request link.
   © [zohre](http://t.me/zamaneh_z)"""
-
 import re
 from platform import uname
 
@@ -12,8 +11,11 @@ import requests
 from bs4 import BeautifulSoup
 from telethon import events
 
-from .. import ALIVE_NAME, CMD_HELP
-from ..utils import admin_cmd, edit_or_reply, sudo_cmd
+from .. import ALIVE_NAME
+from .. import CMD_HELP
+from ..utils import admin_cmd
+from ..utils import edit_or_reply
+from ..utils import sudo_cmd
 
 
 @borg.on(admin_cmd(pattern="app (.*)"))
