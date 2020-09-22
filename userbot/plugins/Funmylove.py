@@ -1,19 +1,19 @@
 # Original written by @Hackintush
 
-from telethon import events
-import random
-import re
 import asyncio
 import os
+import random
+import re
 import sys
 import time
-import requests
-from random import choice, randint
 from collections import deque
-from uniborg.util import admin_cmd
+from random import choice, randint
 
+import requests
+from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
+from uniborg.util import admin_cmd
 
 from userbot import CMD_HELP
 from userbot.utils import register

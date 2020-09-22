@@ -1,11 +1,13 @@
 ﻿"""Auto Profile Updation Commands
 .autoname"""
-from telethon import events
 import asyncio
 import time
-from telethon.tl import functions
+
+from telethon import events
 from telethon.errors import FloodWaitError
-from uniborg.util import admin_cmd, sudo_cmd, edit_or_reply
+from telethon.tl import functions
+from uniborg.util import admin_cmd, edit_or_reply, sudo_cmd
+
 from userbot import ALIVE_NAME
 
 DEL_TIME_OUT = 60

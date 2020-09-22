@@ -5,13 +5,15 @@ Credits @zamaneh_z
   © [zohre](http://t.me/zamaneh_z)"""
 
 import re
+from platform import uname
+
 import bs4
 import requests
-from platform import uname
-from telethon import events
 from bs4 import BeautifulSoup
-from .. import CMD_HELP, ALIVE_NAME
-from ..utils import admin_cmd, sudo_cmd, edit_or_reply
+from telethon import events
+
+from .. import ALIVE_NAME, CMD_HELP
+from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
 @borg.on(admin_cmd(pattern="app (.*)"))

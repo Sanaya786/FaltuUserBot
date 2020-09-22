@@ -2,11 +2,13 @@
 # IMG CREDITS: @WhySooSerious
 import asyncio
 import time
-from userbot.plugins.timefunc import uptimebot, get_readable_time
+
 from telethon import events
-from uniborg.util import admin_cmd, sudo_cmd, edit_or_reply
-from userbot import ALIVE_NAME
 from telethon.tl.types import ChannelParticipantsAdmins
+from uniborg.util import admin_cmd, edit_or_reply, sudo_cmd
+
+from userbot import ALIVE_NAME
+from userbot.plugins.timefunc import get_readable_time, uptimebot
 
 uptime = get_readable_time((time.time() - uptimebot))
 issudousing = Config.SUDO_USERS
