@@ -191,14 +191,14 @@ async def upstream(event):
         return
     if changelog == "" and not force_update:
         await event.edit(
-            "\n`Friday is`  **up-to-date**  `with`  "
+            "\n`FaltuUserBot is`  **up-to-date**  `with`  "
             f"**{UPSTREAM_REPO_BRANCH}**\n"
         )
         return repo.__del__()
     if conf == "" and force_update is False:
         await print_changelogs(event, ac_br, changelog)
         await event.delete()
-        return await event.respond('Update Friday Userbot By `.update deploy` // `.update now`')
+        return await event.respond('Update by  `.update deploy` // `.update now`')
 
     if force_update:
         await event.edit(
