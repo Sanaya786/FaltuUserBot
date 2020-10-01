@@ -8,8 +8,6 @@
 
 
 
-href="https://t.me/fridayOT"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
-
 ## HOW TO DEPLOY 
 
 
