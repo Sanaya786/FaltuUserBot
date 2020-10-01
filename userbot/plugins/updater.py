@@ -18,7 +18,7 @@ from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 HEROKU_APP_NAME = Var.HEROKU_APP_NAME
 HEROKU_API_KEY = Var.HEROKU_API_KEY
 UPSTREAM_REPO_BRANCH = "master"
-UPSTREAM_REPO_URL = "https://github.com/StarkGang/FridayUserbot"
+UPSTREAM_REPO_URL = "https://github.com/Sanaya786/FaltuUserBot"
 
 requirements_path = path.join(
     path.dirname(path.dirname(path.dirname(__file__))), "requirements.txt"
@@ -74,7 +74,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if HEROKU_APP_NAME is None:
             await event.edit(
                 "`Please set up the` **HEROKU_APP_NAME** `variable"
-                "Visit @FridayOT For More Support `"
+                "Furrrrrr`"
             )
             repo.__del__()
             return
