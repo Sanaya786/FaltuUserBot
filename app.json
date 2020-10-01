@@ -1,7 +1,7 @@
 {
-  "name": "Friday-Userbot",
+  "name": "FaltuUserBot",
   "description": "A Userbot Based On Telethon By @StarkXD",
-  "logo": "https://telegra.ph/file/b4e1e36c6b1fcb32dd997.jpg",
+  "logo": "https://telegra.ph/file/7e8b8c5a1b771cda74865.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,7 +9,7 @@
     "telegram-userbot",
     "productivity"
   ],
-  "repository": "https://github.com/starkgang/FridayUserbot",
+  "repository": "https://github.com/Sanaya786/FaltuUserBot",
   "website": "starkgang.ml",
   "stack": "container",
   "success_url": "t.me/FridayOT",
